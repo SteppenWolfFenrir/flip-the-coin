@@ -17,7 +17,7 @@ body {
   background-color: var(--color-grey);
 }
 
-@media (min-width: 411.8px) {
+@media (max-width: 411.8px) {
   body {
     padding: 1rem;
   }
