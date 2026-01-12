@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96"/>
+  <link rel="stylesheet" href="./main.css"/>
+  <script type="module" src="./main.js"></script>
+  <title>Flip the coin | devChallenges.io</title>
+</head>
+<body>
 
-    <link
-      rel="icon"
-      href="resources/favicon.ico"
-      type="image/x-icon"
-      sizes="96x96"
-    />
+<header class="header">
+  <h1 class="header__title">
+    Flip the coin
+  </h1>
+</header>
 
-    <title>Flip the coin | devChallenges.io</title>
-
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        height: 100vh;
-      }
-
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
-
-      .author-info a {
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- 
-
-    Flip a Coin Game
-    Press the coin or the button to flip the coin
-    Head
-    Tail
+<main class="main">
+  <div class="main__description">
+    <p class="main__description-text">
+      Press the coin or the button to flip the coin
+    </p>
+  </div>
+  <svg class="main__coin coin button button--coin" width="160" height="160" fill="none"
+       xmlns="http://www.w3.org/2000/svg">
+    <g class="coin__heads">
+      <circle cx="80" cy="80" r="80" fill="#FDDB5F"/>
+      <g filter="url(#a)">
+        <circle cx="79.5" cy="80.5" r="67.5" fill="#FCB003"/>
+      </g>
+      <g filter="url(#b)">
+        <path
+          d="m73.931 46.334-.111-6.401c-.038-1.41.652-2.115 2.07-2.115l8.252.057c1.324 0 1.977.676 1.958 2.03l-.14 6.034c-.018.959.439 1.542 1.371 1.748 8.579 1.861 13.996 7.069 16.253 15.622.615 2.293-.252 3.45-2.602 3.468l-5.427.057a4.904 4.904 0 0 1-4.643-3.102c-2.098-5.273-9.148-4.484-14.127-4.117-6.042.451-10.322 3.44-8.113 10.038a6.567 6.567 0 0 0 2.42 3.28 6.482 6.482 0 0 0 3.874 1.204c10.127-.198 19.526-.254 25.625 9.051 8.448 12.915.084 24.56-12.924 29.833-1.25.508-1.856 1.439-1.819 2.792l.084 4.991c.019 1.015-.466 1.523-1.454 1.523l-8.588.084a1.929 1.929 0 0 1-1.413-.586 2 2 0 0 1-.43-.662 2.047 2.047 0 0 1-.144-.782l.112-5.724c.02-1.166-.531-1.88-1.65-2.143-9.082-2.106-14.528-7.858-16.337-17.257a1.368 1.368 0 0 1 .279-1.141 1.403 1.403 0 0 1 1.064-.523l8.448-.113c1.007-.018 1.744.433 2.21 1.354 1.958 3.985 5.007 5.987 9.148 6.006 5.958.056 14.63.338 14.658-7.924.056-9.305-17.428-5.977-23.498-8.261-18.044-6.88-15.806-32.766 4.252-36.686a1.66 1.66 0 0 0 .97-.576c.246-.299.378-.674.373-1.06z"
+          fill="#FEDB5D"/>
+      </g>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M.002 79.379C.334 35.689 35.688.335 79.378.002L.002 79.38zm51.571 75.423c-20.005-7.606-36.17-23.008-44.781-42.494L112.308 6.792c19.486 8.612 34.887 24.776 42.494 44.782L51.573 154.802zm108.318-70.588c-2.119 40.828-34.849 73.558-75.677 75.677l75.677-75.677z"
+            fill="#fff" fill-opacity=".15"/>
+    </g>
+    <g class="coin__tails">
+      <circle cx="80" cy="80" r="80" fill="#FDDB5F"/>
+      <g filter="url(#a)">
+        <circle cx="79.5" cy="80.5" r="67.5" fill="#FCB003"/>
+      </g>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M0 79.376C.332 35.686 35.687.332 79.376 0L0 79.376zM51.571 154.8c-20.005-7.607-36.17-23.008-44.781-42.494L112.306 6.79c19.486 8.612 34.887 24.776 42.494 44.781L51.571 154.8zM159.89 84.212c-2.119 40.828-34.849 73.558-75.677 75.677l75.677-75.677z"
+            fill="#fff" fill-opacity=".15"/>
+      <g filter="url(#b)">
+        <rect x="72" y="44" width="16" height="72" rx="2" fill="#FEDB5D"/>
+      </g>
+    </g>
+    <g class="coin__shadow">
+      <ellipse cx="50" cy="4" rx="50" ry="4" fill="#35383F"/>
+    </g>
+  </svg>
+  <span class="main__result">
+    Heads
+  </span>
+  <button class="main__button button button--random">
     Random
-  
-    -->
+  </button>
+</main>
 
-    <div class="author-info">
-      Coded by <a href="#">Valentin Anashkin</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
-    </div>
-  </body>
+<footer class="footer">
+  <div class="footer__author-info">
+    Coded by <a href="https://github.com/SteppenWolfFenrir" target="_blank">Valentin Anashkin</a> | Challenge by
+    <a href="https://www.devchallenges.io?ref=challenge" target="_blank">
+      devChallenges.io
+    </a>
+  </div>
+</footer>
+
+</body>
 </html>

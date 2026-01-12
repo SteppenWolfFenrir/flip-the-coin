@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4rem;
+
+  .main__result {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    color: var(--color-white);
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+}

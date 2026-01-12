@@ -1,0 +1,16 @@
+.coin {
+  overflow: visible;
+
+  .coin__heads {
+    display: block;
+  }
+
+  .coin__tails {
+    display: none;
+  }
+
+  .coin__shadow {
+    cursor: default;
+    transform: translate(30px, 200px) scale(1);
+  }
+}

@@ -1,0 +1,8 @@
+:root {
+  --color-white: #ECEDF0;
+  --color-black: #35383F;
+  --color-blue: #1F6FB0;
+  --color-grey: #404A65;
+
+  --transition-duration: 0.2s;
+}
